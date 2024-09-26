@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "sans-serif";
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.head {
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.logo {
+    width: 70px;
+    cursor: pointer;
+}
+
+.icon-menu {
+    width: 40px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+.bg-vid {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.head1 {
+    color: #fff;
+    font-size: 50px;
+    font-family: poppins;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start; 
+}
+
+.mits-image {
+    width: 45%;
+    margin-right: 20px;
+    box-shadow: 5px 5px 10px #021109;
+    border-radius: 10px;
+}
+
+p {
+    color: #fff;
+    text-align: justify;
+    flex: 1;
+    font-size: 20px;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .bg-vid {
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        flex-direction: row;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .bg-vid {
+        width: auto;
+        height: 100%;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+}
